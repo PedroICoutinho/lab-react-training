@@ -5,7 +5,7 @@ import style from "./style.module.css"
 import { Greetings } from "./components/Iteration 2"
 import { Random } from "./components/Iteration 3"
 import { Boxcolor } from "./components/Iteration 4"
-
+import { CreditCard } from "./components/Iteration 5"
 
 
 
@@ -23,7 +23,7 @@ function App() {
       lastName = "Doe"
       gender = "Male"
       height = "1.78m"
-      birth = "Mon Jul 13 1992" />
+      birth = {new Date("1992-07-14")} />
 
       <IdCard
       img= {FotoPerfilMulher}
@@ -31,7 +31,7 @@ function App() {
       lastName = "Delores"
       gender = "Female"
       height = "1.72m"
-      birth = "Mon May 10 1993" />
+      birth = {new Date("1988-05-11")} />
       </div>
 
 
@@ -54,8 +54,46 @@ function App() {
       <Boxcolor red = {128} green={255} blue= {0}/>
       </div>
 
+      <h1>CreditCard</h1>
+      <div className= {style.globalCss}>
+      <CreditCard
+          type="Visa"
+          number="0123456789018845"
+          expirationMonth={3}
+          expirationYear={2021}
+          bank="BNP"
+          owner="Maxence Bouret"
+          bgColor="#11aa99"
+          color="white" 
+      />
+      <CreditCard
+          type="Master Card"
+          number="0123456789010995"
+          expirationMonth={3}
+          expirationYear={2021}
+          bank="N26"
+          owner="Maxence Bouret"
+          bgColor="#eeeeee"
+          color="#222222"
+        />
+      <CreditCard
+          type="Visa"
+          number="0123456789016984"
+          expirationMonth={12}
+          expirationYear={2019}
+          bank="Name of the Bank"
+          owner="Firstname Lastname"
+          bgColor="#ddbb55"
+          color="white" 
+        />    
+
+
+      </div>
+
     </div>
   )
 }
 
 export default App
+
+// Credit card - <p>************{props.number.slice(-4)}</p>

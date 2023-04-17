@@ -1,0 +1,31 @@
+.card {
+    border-radius: 20px;
+    background-color: #11aa99;
+    color: white;
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .bandeira {
+    width: 50px;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    left: 210px;
+  } 
+
+  .numberCard{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 45px;
+    font-size: 20pt;
+  }
+
+  .textCard{
+    margin-left: 20px;
+    position: relative;
+    top: 30px;
+  }
